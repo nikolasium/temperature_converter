@@ -3,15 +3,19 @@
 // temperature_converter.cpp : This file contains the function "main". This is where the execution of the program begins and ends.
 //
 
-#include <iostream>
 #include "Temp.h"
-
-using namespace std;
 
 
 int main()
 {
+    char again = 'x';
     cout << "Hello!\n";
-    user_interact();
-    
+    do {
+        user_interact();
+        cout << "Again? (y/n)\n";
+        cin >> again;
+    } while (tolower(again) == 'y');
+
+    cout << "Bye!\n";
+    keep_window_open();
 }
